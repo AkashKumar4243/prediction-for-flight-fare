@@ -1,0 +1,178 @@
+<html lang="en">
+
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+	<title> FLIGHT FARE PREDICTION </title>
+
+
+</head>
+
+
+<body>
+	
+    <div style="color:white">
+            <h1><center><i>FLIGHT FARE PREDICTION</i></center></h1>
+
+		<form action="\predict" method="post">
+
+         	<center><h3 style="font-family:Arial;">DEPARTURE DATE</h3>
+            <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required"></center>
+
+            <center><h3 style="font-family:Arial;">ARRIVAL DATE</h3>
+            <input type="datetime-local" name = "Arrival_Time" id = "Arival_Time" required="required"></center>
+
+
+
+			<center><h3 style="font-family:Arial;"> YOUR SOURCE </h3>
+			<select name = "Source" id="Source" required="required">
+				<option value="Delhi">Delhi</option>
+				<option value="Kolkata">Kolkata</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="Chennai">Chennai</option>
+			</select></center>
+
+
+			<center><h3 style="font-family:Arial;"> YOUR DESTINATION </h3>
+			<select name = "Destination" id="Destination" required="required">
+				<option value="Cochin">Cochin</option>
+				<option value="Delhi">Delhi</option>
+				<option value="New_Delhi">New Delhi</option>
+				<option value="Hyderabad">Hyderabad</option>
+				<option value="Kolkata">Kolkata</option>
+			</select></center>
+
+
+
+			<center><h3 style="font-family:Arial;"> STOPS </h3>
+			<select name = "stops" id="stops" required="required">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="0">No Stop</option>
+			</select></center>
+
+
+			<center><h3 style="font-family:Arial;"> SELECT YOUR AIRLINE TO TRAVEL </h5>
+			<select name = "airline" id="airline" required="required">
+				<option value="Jet Airways">JET AIRWAYS</option>
+				<option value="Air India">AIR INDIA</option>
+				<option value="Multiple Carriers">MULTIPLE CARRIERS</option>
+				<option value="SpiceJet">SPICEJET</option>
+				<option value="Vistara">VISTARA</option>
+				<option value="GoAir">GO AIR</option>
+				<option value="Multiple carriers Premium economy">MULTIPLE CARRIERS PREMIUM ECONOMY</option>
+				<option value="Jet Airways Business">JET AIRWAYS BUSINESS</option>
+				<option value="Vistara Premium economy">VISTARA PREMIUM ECONOMY</option>
+				<option value="Truejet">TRUEJET</option>
+			</select></center>
+
+
+			<center><br><br><button id="sub" type="submit ">Calculate Fare</button>
+            <br></center>
+
+		</form>
+
+		<br>
+		<br>
+		<center><h3>{{ prediction_text }}</h3></center>
+
+
+		<br>
+		<br>
+
+	</div>
+
+	<style>
+		body {
+            padding: 0px;
+            font-family: Arial black, Charcoal, sans-serif;
+            background: url("static/istockphoto-155439315-612x612.jpg") no-repeat center fixed; 
+            background-size: cover;
+		}
+
+		#Source {
+            width: 240px;
+            height: 35px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        #Source:hover {
+            background-color: #2593DF;
+        }
+
+
+        #Destination {
+            width: 240px;
+            height: 35px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        #Destination:hover {
+            background-color: #2593DF;
+        }
+
+
+        #stops {
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        #stops:hover {
+            background-color: #2593DF;
+        }
+
+
+        #airline {
+            width: 240px;
+            height: 35px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        #airline:hover {
+            background-color: #2593DF;
+        }
+
+
+        #sub {
+            width: 250px;
+            height: 35px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 15px;
+            margin: auto;
+            display: block;
+
+        }
+        
+        #sub:hover {
+            background-color: #7CE765;
+        }
+
+
+
+
+
+	</style>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
